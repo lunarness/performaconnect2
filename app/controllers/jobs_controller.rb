@@ -20,7 +20,8 @@ class JobsController < ApplicationController
     end
   
     def show
-    
+      @bookings = @job.bookings
+      @booking = Booking.new
     end
   
     def destroy
@@ -35,10 +36,14 @@ class JobsController < ApplicationController
     private
   
     def job_params
-      params.require(:job).permit(:price, :location, :date, :time, :description)
+      params.require(:job).permit(:payment, :location, :date, :time, :duration, :description)
     end
   
     def find_job
       @job = Job.find(params[:id])
+      
+      def find_bookings
+    
+      end
     end
   end

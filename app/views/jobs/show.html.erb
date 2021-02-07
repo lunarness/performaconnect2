@@ -1,11 +1,32 @@
-<h1>Jobs#show</h1>
+<h1>Jobs</h1>
 <p>Find me in app/views/jobs/show.html.erb</p>
 
 <ul>
     <li>Location: <%= @job.location %></li>
     <li>Date: <%= @job.date %></li>
     <li>Start time: <%= @job.time %></li> 
-    <li>Payment: <%= @job.payment %></li>
+    <li>Duration: <%= @job.duration %></li>
+    <li>Budget: <%= @job.payment %></li>
     <li>Job Description: <%= @job.description %></li>
 </ul>>
-<%= link_to "Show all jobs", job_path %>
+
+<h3> Bookings: </h3>
+<% @bookings.each do |booking| %>
+
+    <h5> username: <%= booking.user.email %> </h5>
+
+    <h5> note: <%= booking.note %> </h5>
+
+    <h5> status: <%= booking.status %> </h5>
+    <br/>
+    <%= link_to "Accept", jobs_path %>
+    <%= link_to "Reject", jobs_path %>
+
+<% end %>
+<br/>
+<div> <%= link_to "Show all jobs", jobs_path %> </div>
+
+<%= simple_form_for [@job, @booking] do |f| %>
+  <%= f.input :note %>
+  <%= f.submit %>
+<% end %>
