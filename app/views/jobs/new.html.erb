@@ -1,0 +1,12 @@
+<h1>Jobs#new</h1>
+<p>Find me in app/views/inspections/new.html.erb</p>
+
+<%= simple_form_for(@job) do |f| %>
+  <%= f.input :location %>
+  <%= f.input :date, :order => [:day, :month, :year]
+%>
+  <%= f.input :time, label: "Start time"%>
+  <%= f.input :payment %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
