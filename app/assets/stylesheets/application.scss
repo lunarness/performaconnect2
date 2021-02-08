@@ -11,3 +11,63 @@
 // // Your CSS partials
 // @import "components/index";
 // @import "pages/index";
+
+.navbar{
+  background-color: blueviolet;
+}
+
+.form-inline{
+    text-align: right;
+}
+.btn{
+    font-family: sans-serif;
+}
+.btn-outline-primary{
+    background-color: turquoise;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 7px;
+    margin: 2px 2px;
+} 
+.btn-outline-success{
+    background-color: red;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 7px;
+    margin: 2px 2px;
+}
+.btn-primary{
+    background-color: lightseagreen;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.btn-danger{
+    background-color: magenta;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
